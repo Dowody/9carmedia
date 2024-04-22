@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@keyframes slide_from_left {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes slide_from_right {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    background-color: #1c2125;
+
+    height: 300vh;
+}
+
+nav
+{
+    background-color: #1c2125;
+    color: white;
+    width: 100%;
+    padding: 1rem 0rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    transition: .3s ease;
+
+    z-index: 1;
+
+}
+nav .logo
+{
+    position: relative;
+    animation: slide_from_left 1s;
+}
+nav .logo img
+{
+    width: 10rem;
+    margin-right: 30rem;
+
+}
+nav ul
+{
+    display: flex;
+
+    position: relative;
+    animation: slide_from_right 1s;
+}
+nav ul li
+{
+    list-style: none;
+    padding: 0 1rem;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+
+    transition: .3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+nav ul li a:hover
+{
+    background-color: white;
+    color: #1c2125;
+}
+
+
+section.header
+{
+    height: 100vh;
+    background: url(images/1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0rem 40%;
+
+    animation: 2s appear;
+    z-index: 0;
+}
+
